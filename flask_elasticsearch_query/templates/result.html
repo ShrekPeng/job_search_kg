@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>{{this_query}}搜索结果</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="stylesheet" href="{{ url_for('static', filename='style_result.css')}}">
+
+</head>
+<form action="http://localhost:5000/result" method="POST">
+   <div class="wrap">
+     <div class="search">
+       <p><input type = "text" class = "searchTerm" name = "Query" placeholder=  {{this_query}}></p>
+       <p><button type = "submit" class = "searchButton" value = "submit" ><i class="fa fa-search"></i></button></p>
+     </div>
+   </div>
+ </form>
+
+  <table border = 1>
+     {% for key, value in result.items() %}
+    <tr>
+      
+       <td> <a href={{value}}>{{key}}</a> </td>
+    </tr>
+ {% endfor %}
+</table>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>校园招聘信息搜索平台</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- 在body标签内添加一个div，包含两个按钮 -->
+<div class="right">
+  <!-- 注册按钮 -->
+  <button class="button">注册</button>
+  <!-- 登录按钮 -->
+  <button class="button">登录</button>
+</div>
+
+<!-- 在form标签之前添加一个div标签，包含一个h1标签和一个input标签 -->
+<div class="topnav">
+  <!-- 添加了一个标题，设置了字体大小和颜色 -->
+  <h1 style="font-size:50px; color:#2196F3; text-align:center;">校园招聘信息搜索平台</h1>
+
+
+<form action="http://localhost:5000/result" method="POST">
+  <div class="wrap">
+    <div class="search">
+      <p><input type = "text" class = "searchTerm" name = "Query" placeholder=  "请输入描述信息，可以是求职意向也可以是自身特点"></p>
+      <p><button type = "submit" class = "searchButton" value = "submit" ><i class="fa fa-search"></i></button></p>
+    </div>
+  </div>
+</form>
+<!-- partial -->
+  
+</body>
+</html>
